@@ -1,0 +1,26 @@
+@function rem($pixels) {
+	@return ($pixels / 16px) * 1rem;
+}
+
+@mixin desktopSize {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+@mixin mobileSize {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+$clrBody:		#575a5d;
+$clrBodyLight:	#6c7074;
+$clrBgGrey:		#f7f7f7;
+$clrBgGrey50:	rgba(247, 247, 247, 0.5);
+
+$clrDark:		#000f37;
+$clrHighlight:	#ff373c;
+$clrSeparator:	rgba(212,211,220,0.5);
+
+$clrRed:		#ff373c;
+$clrRedDark:	#d00005;
