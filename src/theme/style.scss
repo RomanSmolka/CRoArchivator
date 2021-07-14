@@ -2,6 +2,8 @@
 @import 'globals';
 @import 'tooltip';
 
+@import 'vue-select/src/scss/vue-select.scss';
+
 * {
 	box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ body {
 	font-family: 'Nunito', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	color: #575a5d;
+	color: $clrBody;
 	line-height: 1.5;
 	&.nav-open {
 		overflow: hidden;
@@ -237,6 +239,40 @@ button {
 	margin-bottom: rem(40px);
 	@include mobileSize {
 		margin-bottom: rem(30px);
+	}
+}
+
+.v-select {
+	&.sort {
+		width: 110px;
+		font-size: rem(14px);
+		.vs__search, .vs__actions {
+			padding: 0;
+			margin: 0;
+		}
+		.vs__dropdown-toggle {
+			border: none;
+			padding: 0;
+		}
+		.vs__open-indicator {
+			fill: $clrBodyLight;
+		}
+		.vs__dropdown-menu {
+			min-width: 0;
+			border: none;
+		}
+		.vs__dropdown-option {
+			padding: 3px 8px;
+			color: $clrBody;
+			&--highlight {
+				color: #fff;
+				background: $clrHighlight;
+			}
+		}
+		.vs__selected {
+			color: $clrBody;
+			margin: 0;
+		}
 	}
 }
 

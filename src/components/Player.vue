@@ -36,7 +36,7 @@
 			<div v-if="queueOpen" class="queue" v-click-outside="{callback: () => queueOpen = false, excludeClasses: ['next', 'icon', 'btn', 'progress']}">
 				<draggable v-model="localQueue" v-bind="dragOptions">
 					<transition-group>
-						<div v-for="(item, index) in localQueue" :key="index">
+						<div v-for="(item, index) in localQueue" :key="item.stamp">
 
 							<div class="queue-item" :class="{current: cursor === index, past: cursor > index, ['item-'+(localQueue.length-index)]: true}">
 								<h4 @click="changeTrack(index)"><svg class="icon icon--20 icon--play"><use href="#icon-play"></use></svg>{{ item | __getFullTitle }}</h4>

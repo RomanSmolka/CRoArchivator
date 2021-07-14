@@ -4,7 +4,10 @@ import router from './router'
 import store from './store'
 
 import VTooltip from 'v-tooltip'
+import VSelect from 'vue-select'
 import {clickOutside} from './lib/directives'
+
+import OpenIndicator from './components/OpenIndicator.vue'
 
 import './theme/style.scss'
 
@@ -20,11 +23,15 @@ const config = {
 	artworkDetailBase: 'https://www.mujrozhlas.cz/sites/default/files/styles/detail/public/rapi/',
 	artworkDetailBaseAlt: 'https://portal.rozhlas.cz/sites/default/files/styles/cro_16x9_default/public/'
 }
+
+VSelect.props.components.default = () => ({ OpenIndicator })
+
 Vue.prototype.$config = config
 
 Vue.config.productionTip = false
 Vue.use(VTooltip)
 Vue.directive(clickOutside)
+Vue.component('v-select', VSelect)
 
 new Vue({
 	router,
