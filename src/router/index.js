@@ -55,7 +55,6 @@ const routes = [
 
 const router = new VueRouter({
 	mode: 'history',
-	base: process.env.NODE_ENV === 'development' ? '' : '/cro',
 	routes,
 	scrollBehavior (to, from, savedPosition) {
 		return new Promise((resolve) => {

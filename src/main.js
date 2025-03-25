@@ -11,13 +11,10 @@ import OpenIndicator from './components/OpenIndicator.vue'
 
 import './theme/style.scss'
 
-const devEnv = process.env.NODE_ENV === 'development'
-
 // eslint-disable-next-line no-undef
-const ngrokTunnel = typeof tunnel === 'undefined' ? '' : tunnel
 const config = {
-	apiRoot: devEnv ? 'http://192.168.0.21:5000/' : ngrokTunnel + '/cro/api/',
-	staticBase: devEnv ? 'http://192.168.0.21/' : ngrokTunnel + '/',
+	apiRoot: process.env.VUE_APP_API_ROOT || '/api/',
+	staticBase: process.env.VUE_APP_STATIC_BASE || '/',
 	artworkTeaserBase: 'https://www.mujrozhlas.cz/sites/default/files/styles/teaser/public/rapi/',
 	artworkTeaserBaseAlt: 'https://portal.rozhlas.cz/sites/default/files/styles/cro_16x9_default/public/',
 	artworkDetailBase: 'https://www.mujrozhlas.cz/sites/default/files/styles/detail/public/rapi/',

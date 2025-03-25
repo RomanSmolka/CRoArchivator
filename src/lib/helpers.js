@@ -10,7 +10,7 @@ export const __secondsToHms = sec => {
 	const s = Math.round(sec)
 
 	let hours = ((s - s % 3600) / 3600) % 60
-	const minutes = ((s - s % 60) / 60) % 60
+	const minutes = (((s - s % 60) / 60) % 60).toString().padStart(2, '0')
 	const seconds = (s % 60).toString().padStart(2, '0')
 	
 	hours = hours ? hours+':' : ''
