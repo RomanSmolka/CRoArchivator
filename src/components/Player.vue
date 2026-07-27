@@ -276,7 +276,7 @@ export default {
 }
 @mixin range-thumb() {
 	appearance: none;
-	// box-shadow: 0 0 10px 0 rgba(255,55,60,0.5);
+	box-shadow: none;
 	height: 25px;
 	width: 25px;
 	border: none;
