@@ -200,6 +200,18 @@ export default {
 			if (time === this.duration) {
 				this.$store.commit('player/setPlayerState', 'paused')
 			}
+		},
+		currentTrack(track) {
+			if (track) {
+				// Set media session metadata
+				if (navigator.mediaSession) {
+					// eslint-disable-next-line
+					navigator.mediaSession.metadata = new MediaMetadata({
+						title: __getFullTitle(track),
+						artwork: [{ src: (track.attributes.asset && track.attributes.asset.url) || '' }]
+					})
+				}
+			}
 		}
 	},
 	mounted() {
