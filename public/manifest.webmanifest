@@ -3,10 +3,8 @@
 	"short_name": "Archivátor",
 	"description": "Archiv pořadů Českého rozhlasu",
 	"lang": "cs",
-	"dir": "ltr",
-	"start_url": "./",
-	"scope": "./",
-	"id": "/",
+	"start_url": "/",
+	"scope": "/",
 	"display": "standalone",
 	"orientation": "portrait",
 	"background_color": "#ffffff",
@@ -14,22 +12,19 @@
 	"categories": ["entertainment", "music", "news"],
 	"icons": [
 		{
-			"src": "./icons/icon-192.png",
+			"src": "icon-192.png",
 			"sizes": "192x192",
-			"type": "image/png",
-			"purpose": "any"
+			"type": "image/png"
 		},
 		{
-			"src": "./icons/icon-512.png",
+			"src": "icon-512.png",
 			"sizes": "512x512",
-			"type": "image/png",
-			"purpose": "any"
+			"type": "image/png"
 		},
 		{
-			"src": "./icons/apple-touch-icon.png",
+			"src": "apple-touch-icon.png",
 			"sizes": "180x180",
-			"type": "image/png",
-			"purpose": "any"
+			"type": "image/png"
 		}
 	]
 }
